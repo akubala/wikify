@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <SpotifyProvider>
-        <img alt="Vue logo" src="./assets/logo.png">
-        <HelloWorld />
+      <Home />
     </SpotifyProvider>
   </div>
 </template>
