@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <v-app>
     <SpotifyProvider>
       <Home />
     </SpotifyProvider>
-  </div>
+  </v-app>
 </template>
 <script lang="ts" src="./App.ts"></script>
 <style lang="scss" src="./App.scss"></style>
