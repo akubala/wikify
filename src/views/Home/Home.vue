@@ -3,7 +3,7 @@
     <TopBar />
     <div class="home">
       <img alt="Vue logo" src="@/assets/logo.png">
-      <h1>Hello {{ displayName }} !</h1>
+      <h1>Hello World!</h1>
     </div>
   </div>
 </template>

@@ -1,6 +1,6 @@
 @import '@/styles/scrollbar.scss';
 
-html {
+* {
   @include scrollbar;
 }
 
