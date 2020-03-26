@@ -17,11 +17,8 @@ export default class SpotifyProvider extends Vue {
   @Inject(SPOTIFY_API_PROVIDER) public spotifyApi!: SpotifyWebApi.SpotifyWebApiJs;
 
   public items = ['Artysta 1', 'Artysta 2'];
-
   public artist = '';
-
   public searchInput = '';
-
   public searchFunc = _debounce(this.search, debounceTimeout, { trailing: true });
 
   @Watch('searchInput')
