@@ -9,9 +9,10 @@ const opts = {
     dark: true,
     themes: {
       dark: {
-        primary: '#1ad15c',
+        primary: '#1ad15c', // $color-primary
         accent: '#364a5d',
-        success: '#1ad15c',
+        success: '#1ad15c', // $color-primary
+        background: '#282828', // $background-color-tertiary
       },
     },
   },
