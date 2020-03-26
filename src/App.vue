@@ -1,10 +1,9 @@
 <template>
-  <SpotifyProvider>
-    <div id="app">
-      <img alt="Vue logo" src="./assets/logo.png">
-      <HelloWorld />
-    </div>
-  </SpotifyProvider>
+  <v-app>
+    <SpotifyProvider>
+      <Home />
+    </SpotifyProvider>
+  </v-app>
 </template>
 <script lang="ts" src="./App.ts"></script>
-<style scoped lang="scss" src="./App.scss"></style>
+<style lang="scss" src="./App.scss"></style>
