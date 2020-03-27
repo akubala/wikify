@@ -50,7 +50,8 @@
       "ecmaVersion": 2020
     },
     "rules": {
-      "lines-between-class-members": 0
+      "lines-between-class-members": 0,
+      "class-methods-use-this": 0
     }
   },
   "browserslist": [

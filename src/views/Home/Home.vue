@@ -1,9 +1,9 @@
 <template>
   <div>
-    <TopBar />
+    <TopBar @artist="setArtist"/>
     <div class="home">
       <img alt="Vue logo" src="@/assets/logo.png">
-      <h1>Hello World!</h1>
+      <h1>Hello {{artist.name}}!</h1>
     </div>
   </div>
 </template>

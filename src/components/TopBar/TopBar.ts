@@ -3,6 +3,7 @@ import {
   Component,
   Inject,
   Watch,
+  Emit,
 } from 'vue-property-decorator';
 import SpotifyWebApi from 'spotify-web-api-js';
 import _debounce from 'lodash/debounce';
@@ -25,7 +26,7 @@ export default class SpotifyProvider extends Vue {
   public searchFunc = _debounce(this.search, debounceTimeout);
 
   @Watch('searchInput')
-  onSearchChange(value: string | null) {
+  onSearchChange(value: string | null): void {
     if (value && value.length >= minLength) {
       this.searchFunc(value);
     } else {
@@ -33,7 +34,17 @@ export default class SpotifyProvider extends Vue {
     }
   }
 
-  public search(value: string) {
+  @Watch('artist')
+  onArtistChange(artist: SpotifyApi.ArtistObjectFull): void {
+    this.emitArtist(artist);
+  }
+
+  @Emit('artist')
+  emitArtist(value: SpotifyApi.ArtistObjectFull) {
+    return value;
+  }
+
+  private search(value: string): void {
     this.spotifyApi.searchArtists(value, { limit: 10 }).then(
       ({ artists: { items: artists } }: SpotifyApi.ArtistSearchResponse) => {
         this.items = _map(

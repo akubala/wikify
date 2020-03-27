@@ -1,12 +1,14 @@
-import { Vue, Component, Inject } from 'vue-property-decorator';
-// import SpotifyWebApi from 'spotify-web-api-js';
+import { Vue, Component } from 'vue-property-decorator';
 
-// import { SPOTIFY_API_PROVIDER } from '@/consts/providers';
 import TopBar from '@/components/TopBar/TopBar.vue';
 
 @Component({
   components: { TopBar },
 })
 export default class HelloWorld extends Vue {
-  // @Inject(SPOTIFY_API_PROVIDER) private spotifyApi!: SpotifyWebApi.SpotifyWebApiJs;
+  public artist: SpotifyApi.ArtistObjectFull | Record<string, unknown> = {};
+
+  public setArtist(artist: SpotifyApi.ArtistObjectFull): void {
+    this.artist = artist;
+  }
 }
