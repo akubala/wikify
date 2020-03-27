@@ -16,7 +16,6 @@ const opts = {
         accent: '#364a5d',
         success: '#1ad15c', // $color-primary
         background: '#282828', // $background-color-tertiary
-        icon: '#1ad15c',
       },
     },
   },
