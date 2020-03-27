@@ -7,7 +7,7 @@ import './vuetify.scss';
 
 Vue.use(Vuetify);
 
-const opts = {
+export default new Vuetify({
   theme: {
     dark: true,
     themes: {
@@ -20,8 +20,6 @@ const opts = {
     },
   },
   icons: {
-    iconfont: 'mdi' as 'mdi',
+    iconfont: 'mdi',
   },
-};
-
-export default new Vuetify(opts);
+});
