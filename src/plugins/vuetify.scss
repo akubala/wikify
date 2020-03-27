@@ -1,0 +1,15 @@
+.theme {
+  &--dark {
+    .v-icon {
+      color: $color-primary;
+    }
+  }
+}
+
+.v-input {
+  &__prepend-inner {
+    flex-direction: column;
+    height: 100%;
+    margin-top: 0 !important;
+  }
+}
