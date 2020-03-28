@@ -4,10 +4,10 @@
       placeholder="Wyszukaj artystę"
       background-color="background"
       height="50"
-      v-model="artist"
       prepend-inner-icon="mdi-magnify"
-      :search-input.sync="searchInput"
       :items="items"
+      :search-input.sync="searchInput"
+      @change="onArtistChange"
       hide-no-data
       rounded
     />

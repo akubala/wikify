@@ -8,7 +8,7 @@ import TopBar from '@/components/TopBar/TopBar.vue';
 export default class HelloWorld extends Vue {
   public artist: SpotifyApi.ArtistObjectFull | Record<string, unknown> = {};
 
-  public setArtist(artist: SpotifyApi.ArtistObjectFull): void {
+  public onArtistChange(artist: SpotifyApi.ArtistObjectFull): void {
     this.artist = artist;
   }
 }

@@ -21,7 +21,6 @@ export default class SpotifyProvider extends Vue {
   @Inject(SPOTIFY_API_PROVIDER) public spotifyApi!: SpotifyWebApi.SpotifyWebApiJs;
 
   public items: Array<SelectOption<SpotifyApi.ArtistObjectFull>> = [];
-  public artist: SpotifyApi.ArtistObjectFull | Record<string, unknown> = {};
   public searchInput = '';
   public searchFunc = _debounce(this.search, debounceTimeout);
 
@@ -34,13 +33,8 @@ export default class SpotifyProvider extends Vue {
     }
   }
 
-  @Watch('artist')
-  onArtistChange(artist: SpotifyApi.ArtistObjectFull): void {
-    this.emitArtist(artist);
-  }
-
   @Emit('artist')
-  emitArtist(value: SpotifyApi.ArtistObjectFull) {
+  onArtistChange(value: SpotifyApi.ArtistObjectFull) {
     return value;
   }
 
