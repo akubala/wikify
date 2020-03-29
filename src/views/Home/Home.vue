@@ -1,8 +1,8 @@
 <template>
   <div>
-    <TopBar @onArtistChange="onArtistChange"/>
+    <top-bar @onArtistChange="onArtistChange"/>
     <div class="home">
-      <Artist v-if="artist" :artist="artist" />
+      <artist v-if="artist" :artist="artist" />
     </div>
   </div>
 </template>
