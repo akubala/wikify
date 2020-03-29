@@ -1,18 +1,14 @@
-import { Vue, Component, Inject } from 'vue-property-decorator';
-import SpotifyWebApi from 'spotify-web-api-js';
+import { Vue, Component } from 'vue-property-decorator';
 
-import { SPOTIFY_API_PROVIDER } from '@/consts/providers';
-import spotifyApiCatch from '@/utils/spotifyApiCatch';
+import TopBar from '@/components/TopBar/TopBar.vue';
 
-@Component
+@Component({
+  components: { TopBar },
+})
 export default class HelloWorld extends Vue {
-  @Inject(SPOTIFY_API_PROVIDER) private spotifyApi!: SpotifyWebApi.SpotifyWebApiJs;
+  public artist: SpotifyApi.ArtistObjectFull | Record<string, unknown> = {};
 
-  public displayName = '';
-
-  mounted() {
-    this.spotifyApi.getMe().then(({ display_name: displayName }) => {
-      this.displayName = displayName || '';
-    }).catch(spotifyApiCatch);
+  public onArtistChange(artist: SpotifyApi.ArtistObjectFull): void {
+    this.artist = artist;
   }
 }

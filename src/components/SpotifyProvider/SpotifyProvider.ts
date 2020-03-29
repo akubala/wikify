@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import queryString from 'query-string';
 
 import { SPOTIFY_API_PROVIDER } from '@/consts/providers';
+import spotifyApiCatch from '@/utils/spotifyApiCatch';
 
 @Component
 export default class SpotifyProvider extends Vue {
@@ -19,5 +20,7 @@ export default class SpotifyProvider extends Vue {
     if (token) {
       this.spotifyApi.setAccessToken(token as string);
     }
+
+    this.spotifyApi.getMe().catch(spotifyApiCatch);
   }
 }
