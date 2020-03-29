@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import _forEach from 'lodash/forEach';
+import _kebabCase from 'lodash/kebabCase';
 
 import vuetify from '@/plugins/vuetify';
 import components from '@/components';
@@ -10,13 +11,8 @@ import App from './App.vue';
 Vue.config.productionTip = false;
 
 // register components
-_forEach(components, (value, key) => {
-  Vue.component(key, value);
-});
-
-// register views
-_forEach(views, (value, key) => {
-  Vue.component(key, value);
+_forEach({ ...components, ...views }, (value, key) => {
+  Vue.component(_kebabCase(key), value);
 });
 
 new Vue({

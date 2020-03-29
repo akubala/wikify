@@ -4,9 +4,9 @@ import SpotifyProvider from '@/components/SpotifyProvider/SpotifyProvider.vue';
 import TopBar from '@/components/TopBar/TopBar.vue';
 
 const components = {
-  'artist': Artist,
-  'spotify-provider': SpotifyProvider,
-  'top-bar': TopBar,
+  Artist,
+  SpotifyProvider,
+  TopBar,
 };
 
 export default components;

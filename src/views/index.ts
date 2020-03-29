@@ -1,7 +1,7 @@
 import Home from '@/views/Home/Home.vue';
 
 const views = {
-  home: Home,
+  Home,
 };
 
 export default views;
