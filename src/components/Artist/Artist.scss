@@ -41,8 +41,13 @@
     }
 
     iframe {
-      width: 270px;
-      height: 340px;
+      width: 300px;
+      height: 380px;
+
+      @media only screen and (max-width: $sm) {
+        width: 260px;
+        height: 330px;
+      }
   
       @media only screen and (max-width: $xs) {
         width: 100%;
