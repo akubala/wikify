@@ -24,16 +24,30 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px;
+  padding: 10px 30px;
 
   @media only screen and (min-width: $xs-up) {
     width: 50%;
-    padding: 0 10px;
+    padding: 0 20px;
     height: calc(100vh - 344px);
     overflow-y: auto;
   }
-}
 
-.track {
-  padding: 10px;
+  .track {
+    padding: 10px;
+
+    @media only screen and (max-width: $xs) {
+      width: 100%;
+    }
+
+    iframe {
+      width: 270px;
+      height: 340px;
+  
+      @media only screen and (max-width: $xs) {
+        width: 100%;
+        height: 80px;
+      }
+    }
+  }
 }

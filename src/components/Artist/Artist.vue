@@ -13,11 +13,7 @@
       <v-divider :vertical="!isMobile" />
       <div class="tracks-section">
         <div class="track" v-for="src in trackUrls" :key="src">
-          <iframe
-            width="300"
-            height="380"
-            :src="src"
-          />
+          <iframe :src="src" />
         </div>
       </div>
     </div>
