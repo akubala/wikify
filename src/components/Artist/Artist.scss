@@ -1,3 +1,39 @@
+.header {
+  text-align: center;
+}
+
 .name {
   margin: 20px 0;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  
+  @media only screen and (max-width: $xs) {
+    flex-direction: column;
+  }
+}
+
+.section {
+  width: 50%;
+  padding: 30px;
+}
+
+.tracks-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+
+  @media only screen and (min-width: $xs-up) {
+    width: 50%;
+    padding: 0 10px;
+    height: calc(100vh - 344px);
+    overflow-y: auto;
+  }
+}
+
+.track {
+  padding: 10px;
 }
