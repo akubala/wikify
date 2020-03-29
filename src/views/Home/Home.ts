@@ -1,9 +1,10 @@
 import { Vue, Component } from 'vue-property-decorator';
 
 import TopBar from '@/components/TopBar/TopBar.vue';
+import Artist from '@/components/Artist/Artist.vue';
 
 @Component({
-  components: { TopBar },
+  components: { TopBar, Artist },
 })
 export default class HelloWorld extends Vue {
   public artist: SpotifyApi.ArtistObjectFull | Record<string, unknown> = {};

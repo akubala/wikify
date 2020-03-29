@@ -2,8 +2,7 @@
   <div>
     <TopBar @onArtistChange="onArtistChange"/>
     <div class="home">
-      <img alt="Vue logo" src="@/assets/logo.png">
-      <h1>Hello {{artist.name}}!</h1>
+      <Artist v-if="artist" :artist="artist" />
     </div>
   </div>
 </template>
