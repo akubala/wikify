@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <SpotifyProvider>
-      <Home />
-    </SpotifyProvider>
+    <spotify-provider>
+      <home />
+    </spotify-provider>
   </v-app>
 </template>
 <script lang="ts" src="./App.ts"></script>

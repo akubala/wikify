@@ -1,11 +1,9 @@
 <template>
   <div>
-    <TopBar @onArtistChange="onArtistChange"/>
+    <top-bar @onArtistChange="onArtistChange"/>
     <div class="home">
-      <img alt="Vue logo" src="@/assets/logo.png">
-      <h1>Hello {{artist.name}}!</h1>
+      <artist v-if="artist" :artist="artist" />
     </div>
   </div>
 </template>
 <script lang="ts" src="./Home.ts"></script>
-<style scoped lang="scss" src="./Home.scss"></style>
