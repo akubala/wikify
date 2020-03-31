@@ -7,8 +7,14 @@
       <h2 class="name">{{name}}</h2>
     </div>
     <div class="content">
-      <div class="section">
+      <div class="summary-section" v-if="summary">
         <h4>Opis</h4>
+        <div class="truncate">
+          {{summary}}
+        </div>
+        <a v-if="wikiUrl" :href="wikiUrl">
+          Zobacz oryginaly wpis na wikipedia
+        </a>
       </div>
       <v-divider :vertical="!isMobile" />
       <div class="tracks-section">
