@@ -14,6 +14,7 @@ const spotifyApiCatch = ({ response }: XMLHttpRequest) => {
       client_id: env.CLIENT_ID,
       response_type: 'token',
       redirect_uri: env.REDIRECT_URI,
+      scope: 'user-top-read'
     });
     window.location.href = `https://accounts.spotify.com/authorize?${searchUrl}`;
   }

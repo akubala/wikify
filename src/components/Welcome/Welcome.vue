@@ -7,6 +7,8 @@
       <h4>Have you ever wanted to automatically listen to your favourite music and at the same time find useful info about the author?</h4>
       <h3>We neither, but now you can do this!</h3>
     </div>
+    <v-divider />
   </div>
 </template>
+<script src="./Welcome.ts" lang="ts"></script>
 <style scoped lang="scss" src="./Welcome.scss"></style>
