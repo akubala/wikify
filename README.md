@@ -6,8 +6,9 @@ Have you ever wanted to automatically listen to your favourite music and at the 
 
 __Application URL coming soon, stay tuned!__
 
+---
 
-## Project setup
+# Project setup
 
 WikiFy was proudly made with [Vue.js](https://vuejs.org/).
 We used [yarn](https://yarnpkg.com/) package manager.
@@ -16,22 +17,22 @@ We used [yarn](https://yarnpkg.com/) package manager.
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles and hot-reloads for development
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+#### Compiles and minifies for production
 ```
 yarn build
 ```
 
-### Lints and fixes files
+#### Lints and fixes files
 ```
 yarn lint
 ```
 
-### Customize configuration
+#### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ---
