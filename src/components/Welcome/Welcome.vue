@@ -24,13 +24,21 @@
       </v-col>
     </v-row>
     <v-row no-gutters style="height: 100px;"></v-row>
-    <v-row>
+    <v-row justify="center">
       <v-col>
         <h2 class="text-center">Usage</h2>
-        <p>TBD (info about Spotify credentials)</p>
+        <br />
+        <p class="text-center">
+          To use our app you are obligated to have your
+          <strong>
+            <a href="https://www.spotify.com/">own Spotify Account.</a>
+          </strong>
+        </p>
+        <p></p>
       </v-col>
     </v-row>
     <v-row no-gutters style="height: 100px;"></v-row>
+    <v-divider />
     <v-row>
       <v-col>
         <h2>What's up on Spotify?</h2>
@@ -48,7 +56,7 @@
         </div>
       </v-col>
       <v-col>
-        <h2>Whant new knowledge?</h2>
+        <h2 class="text-right">Want new knowledge?</h2>
       </v-col>
     </v-row>
   </v-container>
