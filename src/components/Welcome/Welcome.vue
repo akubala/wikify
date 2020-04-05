@@ -11,18 +11,26 @@
       </v-col>
       <v-col>
         <h2>Know your music!</h2>
-        <br>
+        <br />
         <p>Listen to your favourite music and find info about the author!</p>
-        <p>WikiFy was proudly made with <a href="https://vuejs.org">Vue.js</a></p>
-        <p>We used <a href="https://yarnpkg.com/">yarn</a> package manager.</p>
+        <p>
+          WikiFy was proudly made with
+          <a href="https://vuejs.org">Vue.js</a>
+        </p>
+        <p>
+          We used
+          <a href="https://yarnpkg.com/">yarn</a> package manager.
+        </p>
       </v-col>
     </v-row>
+    <v-row no-gutters style="height: 100px;"></v-row>
     <v-row>
       <v-col>
         <h2 class="text-center">Usage</h2>
         <p>TBD (info about Spotify credentials)</p>
       </v-col>
     </v-row>
+    <v-row no-gutters style="height: 100px;"></v-row>
     <v-row>
       <v-col>
         <h2>What's up on Spotify?</h2>
