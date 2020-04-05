@@ -8,12 +8,12 @@
     </div>
     <div class="content">
       <div class="summary-section" v-if="summary">
-        <h4>Opis</h4>
+        <h4>About</h4>
         <div class="truncate">
           {{summary}}
         </div>
         <a v-if="wikiUrl" :href="wikiUrl">
-          Zobacz oryginaly wpis na wikipedia
+          See original article on Wikipedia
         </a>
       </div>
       <v-divider :vertical="!isMobile" />
