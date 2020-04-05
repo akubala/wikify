@@ -57,6 +57,10 @@
       </v-col>
       <v-col>
         <h2 class="text-right">Want new knowledge?</h2>
+          <br>
+          <h3>{{ artTitle }}</h3>
+          <br>
+          <p>{{ artContent }}</p>
       </v-col>
     </v-row>
   </v-container>
