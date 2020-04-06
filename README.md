@@ -4,8 +4,7 @@
 
 Have you ever wanted to automatically listen to your favourite music and at the same time find useful info about the author? We neither, but now you can do this!
 
-__Application URL coming soon, stay tuned!__
-
+## [Open WikiFy App!](http://wizard.uek.krakow.pl/~s200259/)
 ---
 
 # Project setup
