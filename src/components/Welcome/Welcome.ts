@@ -33,10 +33,7 @@ export default class SpotifyProvider extends Vue {
   private getRandomWiki(): void {
     wiki.random().then((results) => {
       this.artTitle = results[0];
-      console.log(this.artTitle)
-
       wiki.page(this.artTitle).then((page) => page.summary()).then((summary) => {
-        console.log(summary)
         this.artContent = summary;
       });
     });

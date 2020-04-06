@@ -8,7 +8,7 @@
     </div>
     <div class="content">
       <div class="summary-section" v-if="summary">
-        <h4>About</h4>
+        <h2>About</h2>
         <div class="truncate">
           {{summary}}
         </div>
