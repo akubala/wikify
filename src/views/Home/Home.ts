@@ -6,5 +6,6 @@ export default class HelloWorld extends Vue {
 
   public onArtistChange(artist: SpotifyApi.ArtistObjectFull): void {
     this.artist = artist;
+    this.$emit('artistChange', artist);
   }
 }

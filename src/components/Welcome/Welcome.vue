@@ -24,7 +24,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters style="height: 100px;"></v-row>
-    <v-row justify="center">
+    <v-row justify="center" v-if="!tokenExist">
       <v-col>
         <h2 class="text-center">Usage</h2>
         <br />
@@ -33,34 +33,9 @@
           <strong>
             <a href="https://www.spotify.com/">own Spotify Account.</a>
           </strong>
+          </br><button v-if="!tokenExist" class="button" v-on:click="login">Login with Spotify</button>
         </p>
         <p></p>
-      </v-col>
-    </v-row>
-    <v-row no-gutters style="height: 100px;"></v-row>
-    <v-divider />
-    <v-row>
-      <v-col>
-        <h2>What's up on Spotify?</h2>
-        <div class="top-artists">
-          <div class="artist">
-            <v-avatar
-              size="100"
-              :title="artist.name"
-              v-for="artist in topArtists"
-              v-bind:key="artist.name"
-            >
-              <img :src="artist.images[0].url" />
-            </v-avatar>
-          </div>
-        </div>
-      </v-col>
-      <v-col>
-        <h2 class="text-right">Want new knowledge?</h2>
-          <br>
-          <h3>{{ artTitle }}</h3>
-          <br>
-          <p>{{ artContent }}</p>
       </v-col>
     </v-row>
   </v-container>
