@@ -28,18 +28,31 @@
       <v-col>
         <h2 class="text-center">Usage</h2>
         <br />
-        <p class="text-center">
-          To use our app you are obligated to have your
-          <strong>
-            <a href="https://www.spotify.com/">own Spotify Account.</a>
-          </strong>
-          </br><button v-if="!tokenExist" class="button" v-on:click="login">Login with Spotify</button>
-        </p>
+        <div class="text-center">
+          <p>
+            To use our app you are obligated to have your
+            <a
+              href="https://www.spotify.com/"
+            >own Spotify Account.</a>
+          </p>
+          <button v-if="!tokenExist" class="button" v-on:click="login">Login with Spotify</button>
+        </div>
         <p></p>
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/bLg3KgN02oI"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </v-row>
   </v-container>
 </template>
-
 <script src="./Welcome.ts" lang="ts"></script>
 <style scoped lang="scss" src="./Welcome.scss"></style>
