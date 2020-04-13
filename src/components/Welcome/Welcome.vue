@@ -40,7 +40,7 @@
         <p></p>
       </v-col>
     </v-row>
-    <v-row justify="center">
+    <v-row justify="center" v-if="!tokenExist">
       <div>
         <iframe
           width="560"
