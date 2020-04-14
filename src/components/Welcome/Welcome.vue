@@ -43,8 +43,8 @@
     <v-row justify="center" v-if="!tokenExist">
       <div>
         <iframe
-          width="560"
-          height="315"
+          width="400"
+          height="300"
           src="https://www.youtube.com/embed/bLg3KgN02oI"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
