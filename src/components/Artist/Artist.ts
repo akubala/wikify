@@ -50,12 +50,17 @@ export default class SpotifyProvider extends Vue {
     ).catch(spotifyApiCatch);
   }
 
+  private noWikiFound(): void {
+    this.summary = 'We could not find desired artist, sorry! : (';
+    this.wikiUrl = '';
+  }
+
   private setWikiPage(name: string) {
     wiki.page(name).then((page) => {
       this.wikiUrl = _get(page, 'raw.fullurl', '');
       page.summary().then((summary) => {
         this.summary = summary;
       });
-    });
+    }).catch(this.noWikiFound);
   }
 }

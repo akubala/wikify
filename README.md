@@ -5,6 +5,11 @@
 Have you ever wanted to automatically listen to your favourite music and at the same time find useful info about the author? We neither, but now you can do this!
 
 ## [Open WikiFy App!](http://wizard.uek.krakow.pl/~s200259/)
+
+## Video presentation
+
+[![WikiFy Video presentation](https://img.youtube.com/vi/bLg3KgN02oI/0.jpg)](https://youtu.be/bLg3KgN02oI)
+
 ---
 
 # Project setup

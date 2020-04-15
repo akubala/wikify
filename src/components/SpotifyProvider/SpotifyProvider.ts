@@ -3,12 +3,13 @@ import SpotifyWebApi from 'spotify-web-api-js';
 import Cookies from 'js-cookie';
 import queryString from 'query-string';
 
-import { SPOTIFY_API_PROVIDER } from '@/consts/providers';
-import spotifyApiCatch from '@/utils/spotifyApiCatch';
+import { SPOTIFY_API_PROVIDER, SPOTIFY_IS_LOGGED_OBSERVABLE } from '@/consts/providers';
 
 @Component
 export default class SpotifyProvider extends Vue {
   @Provide(SPOTIFY_API_PROVIDER) public spotifyApi = new SpotifyWebApi();
+  @Provide(SPOTIFY_IS_LOGGED_OBSERVABLE)
+  public spotifyIsLoggedObservable = Vue.observable({ value: false });
 
   constructor() {
     super();
@@ -21,6 +22,8 @@ export default class SpotifyProvider extends Vue {
       this.spotifyApi.setAccessToken(token as string);
     }
 
-    this.spotifyApi.getMe().catch(spotifyApiCatch);
+    this.spotifyApi.getMe().then(() => {
+      this.spotifyIsLoggedObservable.value = true;
+    });
   }
 }

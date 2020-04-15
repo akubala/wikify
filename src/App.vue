@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <spotify-provider>
+    <spotify-provider >
       <home />
     </spotify-provider>
   </v-app>
