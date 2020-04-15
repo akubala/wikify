@@ -52,6 +52,7 @@
         ></iframe>
       </div>
     </v-row>
+    <welcome-footer v-if="spotifyIsLogged"/>
   </v-container>
 </template>
 <script src="./Welcome.ts" lang="ts"></script>
