@@ -34,9 +34,7 @@ export default class SpotifyProvider extends Vue {
   }
 
   @Emit('onArtistChange')
-  onArtistChange(value: SpotifyApi.ArtistObjectFull) {
-    return value;
-  }
+  onArtistChange(value: SpotifyApi.ArtistObjectFull) { return value; }
 
   private search(value: string): void {
     this.spotifyApi.searchArtists(value, { limit: 10 }).then(

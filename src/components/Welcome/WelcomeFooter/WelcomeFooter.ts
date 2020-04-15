@@ -1,7 +1,6 @@
-import {
-  Vue, Component, Inject,
-} from 'vue-property-decorator';
+import { Vue, Component, Inject } from 'vue-property-decorator';
 import SpotifyWebApi from 'spotify-web-api-js';
+
 import { SPOTIFY_API_PROVIDER } from '@/consts/providers';
 import spotifyApiCatch from '@/utils/spotifyApiCatch';
 import wiki from '@/plugins/wiki';
@@ -29,8 +28,8 @@ export default class SpotifyProvider extends Vue {
   }
 
   private getRandomWiki(): void {
-    wiki.random().then((results) => {
-      this.artTitle = results[0];
+    wiki.random().then(([artTitle]) => {
+      this.artTitle = artTitle;
       wiki.page(this.artTitle).then((page) => page.summary()).then((summary) => {
         this.artContent = summary;
       });

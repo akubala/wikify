@@ -1,10 +1,10 @@
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
+import loginToSpotify from '@/utils/loginToSpotify';
+
 @Component
 export default class Welcome extends Vue {
-  @Prop() public tokenExist!: string;
+  @Prop() public spotifyIsLogged!: boolean;
 
-  private login(): void {
-    this.$emit('login');
-  }
+  readonly loginToSpotify = loginToSpotify;
 }

@@ -3,17 +3,15 @@
     <v-row>
       <v-col>
         <h2 class="text-center">What's up on Spotify?</h2>
-        <div class="top-artists">
-          <div class="artist">
-            <v-avatar
-              size="100"
-              :title="artist.name"
-              v-for="artist in topArtists"
-              v-bind:key="artist.name"
-            >
-              <img :src="artist.images[0].url" />
-            </v-avatar>
-          </div>
+        <div class="artists">
+          <v-avatar
+            v-for="artist in topArtists"
+            v-bind:key="artist.name"
+            size="100"
+            :title="artist.name"
+          >
+            <img :src="artist.images[0].url" />
+          </v-avatar>
         </div>
       </v-col>
       <v-col>
@@ -26,6 +24,5 @@
     </v-row>
   </v-container>
 </template>
-
 <script src="./WelcomeFooter.ts" lang="ts"></script>
 <style scoped lang="scss" src="./WelcomeFooter.scss"></style>
