@@ -35,7 +35,7 @@
               href="https://www.spotify.com/"
             >own Spotify Account.</a>
           </p>
-          <button v-if="!tokenExist" class="button" v-on:click="login">Login with Spotify</button>
+          <button class="button" v-on:click="loginToSpotify">Login with Spotify</button>
         </div>
         <p></p>
       </v-col>
