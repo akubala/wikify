@@ -2,9 +2,9 @@ import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component
 export default class Welcome extends Vue {
-  @Prop() public tokenExist!: string;
+  @Prop() public tokenExist!: boolean;
 
-  private login(): void {
+  public login(): void {
     this.$emit('login');
   }
 }

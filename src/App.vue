@@ -4,10 +4,10 @@
       <home @artistChange="artistChange" />
     </spotify-provider>
     <div v-if="!artist">
-    <welcome :tokenExist="tokenExist" @login="login"/>
-    <spotify-provider v-if="tokenExist">
-      <welcome-footer />
-    </spotify-provider>
+      <welcome :tokenExist="tokenExist" @login="login"/>
+      <spotify-provider v-if="tokenExist">
+        <welcome-footer />
+      </spotify-provider>
     </div>
   </v-app>
 </template>
