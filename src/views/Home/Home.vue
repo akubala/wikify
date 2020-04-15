@@ -5,7 +5,7 @@
       <artist v-if="artist" :artist="artist" />
     </div>
     <div v-if="!artist">
-      <welcome :tokenExist="spotifyIsLogged" />
+      <welcome :spotifyIsLogged="spotifyIsLogged" />
       <welcome-footer v-if="spotifyIsLogged"/>
     </div>
   </div>

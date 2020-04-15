@@ -4,7 +4,7 @@ import loginToSpotify from '@/utils/loginToSpotify';
 
 @Component
 export default class Welcome extends Vue {
-  @Prop() public tokenExist!: boolean;
+  @Prop() public spotifyIsLogged!: boolean;
 
   readonly loginToSpotify = loginToSpotify;
 }

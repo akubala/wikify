@@ -24,7 +24,7 @@
       </v-col>
     </v-row>
     <v-row no-gutters style="height: 100px;"></v-row>
-    <v-row justify="center" v-if="!tokenExist">
+    <v-row justify="center" v-if="!spotifyIsLogged">
       <v-col>
         <h2 class="text-center">Usage</h2>
         <br />
@@ -40,7 +40,7 @@
         <p></p>
       </v-col>
     </v-row>
-    <v-row justify="center" v-if="!tokenExist">
+    <v-row justify="center" v-if="!spotifyIsLogged">
       <div>
         <iframe
           width="400"
